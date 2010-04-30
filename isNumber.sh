@@ -1,4 +1,4 @@
-#
+##
 # Check if an argument is a number.
 #
 # Adapted from: http://pbrisbin.com:8080/
