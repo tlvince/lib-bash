@@ -20,5 +20,3 @@ getNotifier()
 
     echo $notifier
 }
-
-getNotifier
