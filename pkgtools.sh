@@ -7,15 +7,15 @@
 install() { sudo pacman -S "$@" || aurget -S "$@"; }
 
 ##
-# Search for summary information about the given package(s).
+# Search for summary information about the given package.
 #
-# param $@ string   The package(s) to search for.
+# param $1 string   The package to search for.
 #
-pkgsearch() { pacman -Ss "$@"; aurget -Ss "$@"; }
+pkgsearch() { pacman -Ss "$1"; aurget -Ss "$1"; }
 
 ##
-# Search for detailed information about the given package(s).
+# Search for detailed information about the given package.
 #
-# param $@ string   The package(s) to search for.
+# param $1 string   The package to search for.
 #
-pkginfo() { pacman -Si "$@" 2>/dev/null; aurget -Si "$@"; }
+pkginfo() { pacman -Si "$1" 2>/dev/null; aurget -Si "$1"; }
