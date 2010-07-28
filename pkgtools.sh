@@ -11,11 +11,11 @@ install() { sudo pacman -S "$@" || aurget -S "$@"; }
 #
 # param $@ string   The package(s) to search for.
 #
-pkgsearch() { pacman -Ss "$@" && aurget -Ss "$@"; }
+pkgsearch() { pacman -Ss "$@"; aurget -Ss "$@"; }
 
 ##
 # Search for detailed information about the given package(s).
 #
 # param $@ string   The package(s) to search for.
 #
-pkginfo() { pacman -Si "$@" && aurget -Si "$@"; }
+pkginfo() { pacman -Si "$@"; aurget -Si "$@"; }
