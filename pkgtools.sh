@@ -18,4 +18,4 @@ pkgsearch() { pacman -Ss "$@"; aurget -Ss "$@"; }
 #
 # param $@ string   The package(s) to search for.
 #
-pkginfo() { pacman -Si "$@"; aurget -Si "$@"; }
+pkginfo() { pacman -Si "$@" 2>/dev/null; aurget -Si "$@"; }
