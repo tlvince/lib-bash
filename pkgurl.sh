@@ -7,9 +7,9 @@
 # Open the url of a package into the default browser.
 #
 # Depends:
-# * Bauerbill
+# * Aurget
 #
 pkgurl()
 {
-    xdg-open $(bauerbill -Si --aur $1 | grep "URL *. :" | awk '{print $3}')
+    xdg-open $(aurget -Si --aur $1 | grep "URL *. :" | awk '{print $3}')
 }
