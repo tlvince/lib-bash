@@ -1,1 +1,9 @@
-A collection of bash library functions.
+A collection of **bash** library functions.
+
+* Since the target shell is bash, assume portability has not been taken into
+account
+
+  * However, it does mean we can make use of nifty features like advanced
+    [Paramater Expansion][1] ;)
+
+  [1]: http://mywiki.wooledge.org/BashFAQ/074
