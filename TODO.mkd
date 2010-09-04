@@ -1,0 +1,2 @@
+* Add libs required by other projects
+* PKGBUILD?
