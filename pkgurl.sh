@@ -11,5 +11,5 @@
 #
 pkgurl()
 {
-    xdg-open $(aurget -Si --aur $1 | grep "URL *. :" | awk '{print $3}')
+    xdg-open $(aurget -Si "$1" | grep "URL *. :" | awk '{print $3}')
 }
