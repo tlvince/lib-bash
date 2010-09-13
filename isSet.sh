@@ -18,12 +18,29 @@
 
 
 ##
-# If the given variable is not set, prompt to set it.
+# Return 1 if $1 is not set, otherwise 0.
 #
-# @param $1 string  The name of a variable.
-# @param $2 string  An arbitrary prompt, corresponding to $1.
+# @param $1 string  The name of a variable (excluding leading dollar).
 #
 isSet()
 {
-    [[ -z ${!1} ]] && read -p "$2" $1 && isSet "$@"
+    [[ ${!1} ]]
+}
+
+
+##
+# If the given variable is not set, recursively prompt to set it.
+#
+# @param $1 string  The name of a variable (excluding leading dollar).
+# @param $2 string  An optional prompt to set $1.
+#
+isSetPrompt()
+{
+    [[ $2 ]] || set "$1" "Please set $1: "
+
+    isSet "$1"
+    [[ $? != 0 ]] && {
+        read -p "$2" $1
+        isSetPrompt "$@"
+    }
 }
