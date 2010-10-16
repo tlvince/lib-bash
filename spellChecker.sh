@@ -1,6 +1,5 @@
-# Spellchecker
-# From: http://www.joegrossberg.com/archives/000080.html
+# In-line spellchecker
 sp()
 {
-    echo $@ | aspell -a | grep -v "^@(#)"
+    aspell -a < <(echo $@) | grep -v "^@(#)"
 }
