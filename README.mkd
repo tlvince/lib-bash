@@ -1,9 +1,19 @@
+# lib-bash
+
 A collection of **bash** library functions.
 
 * Since the target shell is bash, assume portability has not been taken into
 account
 
   * However, it does mean we can make use of nifty features like advanced
-    [Paramater Expansion][1] ;)
+    [Paramater Expansion][1]
+
+## Author
+
+Copyright 2010-2013 Tom Vincent <http://tlvince.com/contact>
+
+## License
+
+Licensed under the GPLv3 license.
 
   [1]: http://mywiki.wooledge.org/BashFAQ/074
